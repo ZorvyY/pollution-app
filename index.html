@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pollution App</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div>
+      <label for="lat">Latitude</label>
+      <input id="lat" type="text"/>
+      <label for="lng">Longitude</label>
+      <input id="lng" type="text"/>
+      <button onclick="setPosition()">Set Position</button>
+    </div>
+    
+      <label for="rad">Set Search Radius</label>
+      <input id="rad" type="text"/>
+    
+      <button onclick="locateUser()">Find current location</button>
+      <button onclick="updateMap()">Update pollution map</button>
+      <p>Your latitude and longitude:</p>
+      <p id="coords">{Lat and Long}</p>
+  
+    
+    <div id="map"></div>
+    <script src="scripts/index.js">
+    </script>
+    <script type="text/javascript" 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0A56FP2f6aP8xhqrBrA3IZrLTCUaMSw&libraries=visualization">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0A56FP2f6aP8xhqrBrA3IZrLTCUaMSw&callback=initMap">
+    </script>
+  </body>
+</html>
